@@ -7,7 +7,7 @@ AudioTracker is a Streamlit application that allows you to upload a PDF file, di
 1. Clone the repository:
 
    ```shell
-   git clone https://github.com/your-username/realtime_speech_text_tracker.git
+   git clone https://github.com/vitalii-97/realtime_speech_text_tracker.git
    ```
 
 2. Navigate to the project directory:
