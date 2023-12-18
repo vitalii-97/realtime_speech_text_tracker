@@ -17,7 +17,7 @@ def main():
         embed_code = get_embed_code(pdf_url)
         # Display the PDF
         st.markdown(embed_code, unsafe_allow_html=True)
-        st.write(" 🤖 Please speak and I will transcribe your audio:")
+        st.write("🤖 Please speak and I will transcribe your audio:")
         transcribed_text = transcribe_audio()
         st.write("Transcribed Text:")
         st.write(transcribed_text)
@@ -43,10 +43,15 @@ def transcribe_audio():
         st.write("Listening...")
         # Continuously listen for audio until interrupted
         while True:
+            # Add cue words to this list
+            cue_words = ["search", "find", "locate"]
+            
             try:
                 audio = recognizer.listen(source, phrase_time_limit=10)  # Limit each transcription to 10 seconds
                 transcribed_text = recognizer.recognize_google(audio)
                 st.write(transcribed_text)
+                if any(cue_word in transcribed_text for cue_word in cue_words):
+                    st.write("Cue word detected!")
             except sr.UnknownValueError:
                 st.write("Sorry, I could not understand your audio.")
             except sr.RequestError as e:
