@@ -7,13 +7,13 @@ AudioTracker is a Streamlit application that allows you to upload a PDF file, di
 1. Clone the repository:
 
    ```shell
-   git clone https://github.com/your-username/AudioTracker.git
+   git clone https://github.com/your-username/realtime_speech_text_tracker.git
    ```
 
 2. Navigate to the project directory:
 
    ````shell
-   cd AudioTracker
+   cd realtime_speech_text_tracker
    ```
 
 3. Install the required dependencies:
@@ -27,7 +27,7 @@ AudioTracker is a Streamlit application that allows you to upload a PDF file, di
 1. Run the Streamlit application:
 
    ````shell
-   streamlit run app.py
+   streamlit run main.py
    ```
 
 2. In the web browser, you will see the AudioTracker application.
